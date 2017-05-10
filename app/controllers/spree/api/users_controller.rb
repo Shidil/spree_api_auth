@@ -1,7 +1,7 @@
 module Spree
   module Api
 
-    UsersController.class_eval do
+    class UsersController < Spree::Api::BaseController
 
       before_action :authenticate_user, :except => [:sign_up, :sign_in]
 
